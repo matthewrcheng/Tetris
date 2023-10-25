@@ -21,10 +21,10 @@ SHAPE_COLORS = [
     (255, 213, 0),
     (255, 213, 0),
     # red 
-    (255, 0, 0),
-    (255, 0, 0),
-    (255, 0, 0),
-    (255, 0, 0),
+    (139, 0, 0),
+    (139, 0, 0),
+    (139, 0, 0),
+    (139, 0, 0),
     # green 
     (0, 255, 0),
     (0, 255, 0),
@@ -263,7 +263,7 @@ while not game_over_flag:
                 new_shape = [[current_shape[y][x] for y in range(len(current_shape))] for x in range(len(current_shape[0]) - 1, -1, -1)]
                 if not check_collision(new_shape, current_shape_offset):
                     current_shape = new_shape
-            elif event.key == pygame.K_SPACE:
+            elif event.key == pygame.K_c:
                 if saved:
                     new_shape = saved
                     saved = current_shape
@@ -276,7 +276,7 @@ while not game_over_flag:
                     up_next = random.choice(SHAPES)
                     if not check_collision(new_shape, current_shape_offset):
                         current_shape = new_shape
-            elif event.key == pygame.K_LSHIFT or event.key == pygame.K_RSHIFT:
+            elif event.key == pygame.K_SPACE:
                 current_shape_offset = hard_drop()
 
 
