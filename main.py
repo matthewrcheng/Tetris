@@ -320,7 +320,7 @@ while not game_over_flag:
                     if left_offset:
                         current_shape = new_shape
                         current_shape_offset = [current_shape_offset[0] - left_offset, current_shape_offset[1]]
-            elif event.key == pygame.K_SPACE:
+            elif event.key == pygame.K_c:
                 if saved:
                     new_shape = saved
                     saved = current_shape
